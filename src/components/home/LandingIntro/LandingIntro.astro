@@ -1,0 +1,29 @@
+---
+import IntroImage from "@assets/landingRocket.png"
+---
+<div class="flex justify-between text-text-6 gap-10">
+    <div class="flex flex-col gap-6  mx-auto xl:mx-0 xl:mt-20 2xl:mt-0 scroll-element-right">
+        <h1 class="-mt-10 xl:mt-0 mx-auto xl:mx-0 font-dela  text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl max-w-[820px] tracking-wider whitespace-break-spaces leading-tight 2xl:pt-10 text-center xl:text-start select-none">
+            SAY HELLO TO <span class="bg-clip-text text-transparent bg-ocean-gradient">ASTROCLOUD</span> — YOUR HIGH-SPEED ROCKET TO THE INTERNET!{' '}
+        </h1>
+        <p class="text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl max-w-[880px]  text-center xl:text-start">
+            Launch faster, stay online longer, and scale without limits, all with a platform
+            that’s ready to launch your site — and your success — into orbit.
+        </p>
+        {/* hover:bg-gradient-to-r hover:from-[#0e094d] hover:via-[#053539] hover:to-[#005366] */}
+        <div class="flex justify-center xl:justify-end gap-4 mt-6 cursor-pointer">
+            <a
+                href={import.meta.env.PUBLIC_USER_DASHBOARD_URL}
+                class="px-6 py-2 bg-deep-ocean text-text-6 rounded-xl text-xl sm:text-2xl xl:text-3xl  font-bold border-border-4 border-2 hover:bg-ocean-gradient hover:text-text-6 hover:opacity-100 "
+            >
+                Start now!
+            </a>
+            <a href="/docs" class="px-6 py-2 bg-component-6 text-text-7 rounded-xl text-xl sm:text-2xl xl:text-3xl font-bold border-border-4 border-2 hover:bg-component-9 hover:text-text-6  hover:opacity-100">
+                Docs
+            </a>
+        </div>
+    </div>
+    <div class=" hidden xl:block scroll-element-left">
+        <img src={IntroImage.src} alt="rocket Image" />
+    </div>
+</div>

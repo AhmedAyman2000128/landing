@@ -1,0 +1,24 @@
+
+<style>
+  html::before,
+  html::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+  }
+
+  html::before {
+    background-image: url(/src/assets/backgrounds/landingBg.svg);
+    opacity: 1;
+  }
+
+</style>
+<div class="fixed left-0 top-0 w-full h-full bg-black/80"></div>

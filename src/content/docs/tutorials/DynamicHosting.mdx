@@ -1,0 +1,54 @@
+---
+title: Dynamic hosting
+description: A complete guide to dynamic hosting on AstroCloud. Set up your dynamic applications by manually uploading files or deploying directly from a GitHub repository, with simple, clear steps.
+image: "@assets/docs/dynamicHostingRocket.png"
+imageAlt: "A painting of an Elvish Rogue in a tree"
+---
+
+## Manual Upload
+
+This guide explains how to manually upload and deploy your dynamic application using a ZIP file.
+
+---
+import addProjectImg from "@assets/docs/tutorials/addProjectImg.png"
+import importZipImg from "@assets/docs/tutorials/importZipImg.png"
+import chooseZipImg from "@assets/docs/tutorials/chooseZipImg.png"
+import dynamicBuildFormImg from "@assets/docs/tutorials/dynamicBuildFormImg.png"
+import logsImg from "@assets/docs/tutorials/logsImg.png"
+
+### Steps
+
+1. Click **Add Project**.
+<img src={addProjectImg.src} alt="Home page"/>
+2. Choose **Import from ZIP file**.
+<img src={importZipImg.src} alt="Add project page"/>
+3. Select your backend application ZIP file.
+<img src={chooseZipImg.src} alt="select zip page"/>
+4. Fill out the **Build Form** (runtime settings, environment variables, etc.).
+<img src={dynamicBuildFormImg.src} alt="Build form page"/>
+5. Click **Deploy**.
+6. You will be redirected to the **Logs Page** to track deployment progress.
+<img src={logsImg.src} alt="logs page"/>
+
+## GitHub Repository
+
+This guide explains how to deploy your dynamic application directly from a GitHub repository.
+
+---
+import importGithubImg from "@assets/docs/tutorials/importGithubImg.png"
+import selectRepoImg from "@assets/docs/tutorials/selectRepoImg.png"
+
+### Steps
+
+1. Click **Add Project**.
+<img src={addProjectImg.src} alt="Home page"/>
+2. Choose **Import from GitHub Repository**.
+<img src={importGithubImg.src} alt="add project page"/>
+3. Select your repository from the list or paste the repository URL manually.
+<img src={selectRepoImg.src} alt="repo page"/>
+4. Fill out the **Build Form** (runtime, environment variables, etc.).
+<img src={dynamicBuildFormImg.src} alt="build form page"/>
+5. Choose **Dynamic** as the project type.
+6. Click **Deploy**.
+7. You will be redirected to the **Logs Page** to track deployment progress.
+<img src={logsImg.src} alt="logs page"/>

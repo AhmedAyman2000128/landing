@@ -1,0 +1,56 @@
+---
+title: Static hosting
+description: A complete guide to static hosting on AstroCloud. Learn how to manually upload your files or deploy directly from a GitHub repository with simple, clear steps.
+image: "@assets/docs/staticHostingRocket.jpg"
+imageAlt: "A painting of an Elvish Rogue in a tree"
+
+---
+
+## Manual Upload
+
+This guide explains how to manually upload your static website using a ZIP file.
+
+---
+import addProjectImg from "@assets/docs/tutorials/addProjectImg.png"
+import importZipImg from "@assets/docs/tutorials/importZipImg.png"
+import chooseZipImg from "@assets/docs/tutorials/chooseZipImg.png"
+import step4 from "@assets/docs/tutorials/logsImg.png"
+
+
+### Steps
+
+1. Click **Add Project**.
+<img src={addProjectImg.src} alt="Home page"/>
+2. Choose **Import from ZIP file**.
+<img src={importZipImg.src} alt="Add project page"/>
+3. Select your website ZIP folder.
+<img src={chooseZipImg.src} alt="Manual upload page"/>
+4. Enter your **Site Name**.
+5. Click **Deploy**.
+6. Your website will be uploaded and deployed with a unique subdomain.
+<img src={step4.src} alt="Logs page"/>
+
+
+## GitHub Repository
+
+This guide explains how to deploy your static website directly from a GitHub repository.
+
+---
+import importGithubImg from "@assets/docs/tutorials/importGithubImg.png"
+import selectRepoImg from "@assets/docs/tutorials/selectRepoImg.png"
+import staticBuildFormImg from "@assets/docs/tutorials/staticBuildFormImg.png"
+
+### Steps
+
+1. Click **Add Project**.
+<img src={addProjectImg.src} alt="Home page"/>
+2. Choose **Import from GitHub Repository**.
+<img src={importGithubImg.src} alt="Add project page"/>
+3. Select your repository from the list or paste the repository URL manually.
+<img src={selectRepoImg.src} alt="Repos page"/>
+4. Fill out the **Build Form** (specify branch, build commands if needed, etc.).
+<img src={staticBuildFormImg.src} alt="Build form page"/>
+5. Choose **Static** as the project type.
+6. Click **Deploy**.
+7. You will be redirected to the **Logs Page** to track deployment progress.
+<img src={step4.src} alt="Logs page"/>

@@ -1,0 +1,121 @@
+---
+import { plainify } from "@lib/textConverter";
+import Header from "@components/base/Header.astro";
+import "@/styles/main.scss";
+import Background from "@/components/base/Background.astro";
+import LandingFooter from "./Footer.astro";
+
+// types for frontmatters
+export interface Props {
+  title?: string;
+  description?: string | null;
+  image?: string;
+  noindex?: boolean;
+  canonical?: string;
+}
+
+const { title, description, image, noindex, canonical } = Astro.props;
+
+const siteTitle = "Astrocloud";
+const siteDescription = "AstroCloud — Scalable Egyptian Cloud Hosting for Modern Web Apps";
+const siteImage = "@assets/astrocloudlogo.png";
+const siteAuthor = "Astrocloud team";
+const baseUrl = "https://astrocloud.tech";
+// import { ClientRouter } from "astro:transitions";
+// import { Tooltips } from "astro-tooltips";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/logoIcon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/logoIcon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/logoIcon.png"
+    />
+    
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    
+    <meta name="generator" content={Astro.generator} />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+
+    <title>
+      {plainify(title ? title : siteTitle)}
+    </title>
+
+    {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+
+    <meta
+      name="description"
+      content={plainify(description ? description : siteDescription)}
+    />
+    <meta name="author" content={siteAuthor} />
+    
+     <!-- Open Graph -->
+  <meta property="og:title" content="AstroCloud — Scalable Egyptian Cloud Hosting for Modern Web Apps" />
+  <meta property="og:description" content="Say hello to Egypt’s first PaaS — AstroCloud. Get fast, reliable static and dynamic hosting for your web apps, with automatic scaling and zero downtime." />
+  <meta property="og:image" content="https://astrocloud.tech/MetaImage.png" />
+  <meta property="og:image:width" content="768" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:url" content="https://astrocloud.tech" />
+  <meta property="og:type" content="website" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:title" content="AstroCloud — Scalable Egyptian Cloud Hosting for Modern Web Apps" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Launch and scale your site with AstroCloud, Egypt’s first PaaS for modern web hosting — fast, dynamic, and fully Egyptian." />
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://astrocloud.tech/MetaImage.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AstroCloud — Scalable Egyptian Cloud Hosting for Modern Web Apps" />
+  <meta name="twitter:description" content="Launch and scale your site with AstroCloud, Egypt’s first PaaS for modern web hosting — fast, dynamic, and fully Egyptian." />
+  <meta name="twitter:image" content="https://astrocloud.tech/MetaImage.png" />
+      
+    <!-- https://docs.astro.build/en/guides/view-transitions -->
+    <!-- <ClientRouter fallback="swap" />
+    <Tooltips interactive={false} delay={[333, 0]} /> -->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <Background />
+    <div class="w-full  fixed z-50">
+    <Header />
+  </div>
+    <main id="main-content" class="flex-1 mt-10 sm:mt-14">
+      <slot/>
+    </main>
+    <div class="z-50">
+    <LandingFooter/>
+    </div>
+    <!-- <ObserverScript /> -->
+    
+  </body>
+</html>

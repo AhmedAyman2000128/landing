@@ -1,0 +1,68 @@
+---
+import BaseLayout from "@components/base/BaseLayout.astro";
+import LandingIntro from "./LandingIntro/LandingIntro.astro";
+import LandingCards from "./LandingCards/LandingCards.astro";
+import LandingScaling from "./LandingScaling/LandingScaling.astro";
+import Animation from "./Animation.astro";
+import Features from "./Features/Features.astro";
+import Deploy from "./Deploy/Deploy.astro";
+// import AnimatedBackground from "./AnimatedBackground";
+
+---
+<!-- pt-10  sm:pt-14 -->
+<BaseLayout>
+  <!-- Banner -->
+  <div class="flex flex-col  relative z-30 font-poppins">
+    <div class="py-14 md:py-30  relative overflow-hidden">
+      <Animation/>
+      <div class="container">
+        <LandingIntro />
+    </div>
+    </div>
+    <div class="bg-deep-ocean py-4 md:py-20 lg:py-30 overflow-hidden">
+        <LandingCards />
+    </div>
+    <div class="py-14 md:py-30 lg:py-48 relative overflow-hidden">
+      <Animation/>
+      <div class="container">
+        <LandingScaling/>
+      </div>
+    </div>
+    <div class="bg-deep-ocean py-4 md:py-10  overflow-hidden">
+      <div class="container ">
+        <Features/>
+      </div>
+    </div>
+    <div class="py-14 md:py-30 lg:py-48 relative overflow-hidden">
+      <Animation/>
+      <Deploy/>
+    </div>
+    </div>
+</BaseLayout>
+
+<script>
+  function animateOnScrolling(elementClass:string,newClass:string){
+    const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add(newClass);
+      }
+      else{
+        entry.target.classList.remove(newClass);
+      }
+    })
+  });
+  document.querySelectorAll(`.${elementClass}`).forEach((el)=>{
+    observer.observe(el);
+  });
+  }
+  // Moving up Animation for scroll effect 
+  animateOnScrolling("scroll-element-up","scrolled-up");
+  // Moving right Animation for scroll effect 
+  animateOnScrolling("scroll-element-right","scrolled-right");
+  // Moving left Animation for scroll effect
+  animateOnScrolling("scroll-element-left","scrolled-left");
+  // Scaling Animation for scroll effect
+  animateOnScrolling("scroll-element-grow","scrolled-grow");
+  
+</script>

@@ -1,0 +1,254 @@
+  
+  .background-animation {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  
+    span {
+      width: 30vmin;
+      height: 30vmin;
+      border-radius: 20vmin;
+      backface-visibility: hidden;
+      position: absolute;
+      animation-name: move;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      opacity: 0.6;
+  
+      @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+          @if $i == 1 {
+            color: #003366;
+            top: 38%;
+            left: 26%;
+            animation-duration: 29.8s;
+            animation-delay: -8.7s;
+            transform-origin: -11vw 23vh;
+            box-shadow: 40vmin 0 9.6808538172vmin currentColor;
+          }
+          @else if $i == 2 {
+            color: #002147;
+            top: 1%;
+            left: 14%;
+            animation-duration: 26.4s;
+            animation-delay: -13.8s;
+            transform-origin: 17vw 0vh;
+            box-shadow: 40vmin 0 12.4313677392vmin currentColor;
+          }
+          @else if $i == 3 {
+            color: #001F54;
+            top: 81%;
+            left: 64%;
+            animation-duration: 23.4s;
+            animation-delay: -2.9s;
+            transform-origin: 5vw 24vh;
+            box-shadow: 40vmin 0 5.6620281836vmin currentColor;
+          }
+          @else if $i == 4 {
+            color: #4169E1;
+            top: 51%;
+            left: 44%;
+            animation-duration: 23.2s;
+            animation-delay: -0.7s;
+            transform-origin: -11vw 8vh;
+            box-shadow: -40vmin 0 11.1062103132vmin currentColor;
+          }
+          @else if $i == 5 {
+            color: #0F52BA;
+            top: 19%;
+            left: 18%;
+            animation-duration: 29.6s;
+            animation-delay: -7.7s;
+            transform-origin: -4vw -12vh;
+            box-shadow: -40vmin 0 9.3953742377vmin currentColor;
+          }
+          @else if $i == 6 {
+            color: #0018A8;
+            top: 50%;
+            left: 43%;
+            animation-duration: 23.8s;
+            animation-delay: -9.4s;
+            transform-origin: 1vw 20vh;
+            box-shadow: 40vmin 0 13.5985133579vmin currentColor;
+          }
+          @else if $i == 7 {
+            color: #0047AB;
+            top: 93%;
+            left: 50%;
+            animation-duration: 22s;
+            animation-delay: -7.9s;
+            transform-origin: -13vw 11vh;
+            box-shadow: 40vmin 0 10.2692497348vmin currentColor;
+          }
+          @else if $i == 8 {
+            color: #007FFF;
+            top: 17%;
+            left: 23%;
+            animation-duration: 32s;
+            animation-delay: -13.1s;
+            transform-origin: -9vw 19vh;
+            box-shadow: 40vmin 0 13.6299720983vmin currentColor;
+          }
+          @else if $i == 9 {
+            color: #1560BD;
+            top: 8%;
+            left: 55%;
+            animation-duration: 29.2s;
+            animation-delay: -14.2s;
+            transform-origin: 10vw 7vh;
+            box-shadow: -40vmin 0 5.9378791402vmin currentColor;
+          }
+          @else if $i == 10 {
+            color: #0073CF;
+            top: 95%;
+            left: 5%;
+            animation-duration: 29.6s;
+            animation-delay: -1.8s;
+            transform-origin: 23vw -21vh;
+            box-shadow: 40vmin 0 9.46701596vmin currentColor;
+          }
+          @else if $i == 11 {
+            color: #4682B4;
+            top: 66%;
+            left: 60%;
+            animation-duration: 20.4s;
+            animation-delay: -13.3s;
+            transform-origin: 4vw 25vh;
+            box-shadow: -40vmin 0 7.0610503702vmin currentColor;
+          }
+          @else if $i == 12 {
+            color: #03045E;
+            top: 88%;
+            left: 7%;
+            animation-duration: 27.8s;
+            animation-delay: -0.7s;
+            transform-origin: 12vw 19vh;
+            box-shadow: -40vmin 0 7.3072425947vmin currentColor;
+          }
+          @else if $i == 13 {
+            color: #003366;
+            top: 81%;
+            left: 33%;
+            animation-duration: 28.2s;
+            animation-delay: -3.8s;
+            transform-origin: -11vw 19vh;
+            box-shadow: 40vmin 0 7.1574421771vmin currentColor;
+          }
+          @else if $i == 14 {
+            color: #003366;
+            top: 22%;
+            left: 46%;
+            animation-duration: 23s;
+            animation-delay: -9.6s;
+            transform-origin: 14vw 24vh;
+            box-shadow: 40vmin 0 6.320030835vmin currentColor;
+          }
+          @else if $i == 15 {
+            color: #00BFFF;
+            top: 79%;
+            left: 59%;
+            animation-duration: 28s;
+            animation-delay: -9s;
+            transform-origin: 9vw 18vh;
+            box-shadow: 40vmin 0 8.3359207499vmin currentColor;
+          }
+          @else if $i == 16 {
+            color: #87CEFA;
+            top: 58%;
+            left: 49%;
+            animation-duration: 21.6s;
+            animation-delay: -11.3s;
+            transform-origin: -21vw 14vh;
+            box-shadow: -40vmin 0 14.5416309043vmin currentColor;
+          }
+          @else if $i == 17 {
+            color: #87CEFA;
+            top: 77%;
+            left: 64%;
+            animation-duration: 31s;
+            animation-delay: -11.6s;
+            transform-origin: 4vw -8vh;
+            box-shadow: 40vmin 0 9.8711892744vmin currentColor;
+          }
+          @else if $i == 18 {
+            color: #00BFFF;
+            top: 72%;
+            left: 63%;
+            animation-duration: 26.6s;
+            animation-delay: -15.2s;
+            transform-origin: 20vw 13vh;
+            box-shadow: 40vmin 0 5.060452646vmin currentColor;
+          }
+          @else if $i == 19 {
+            color: #00B7EB;
+            top: 26%;
+            left: 82%;
+            animation-duration: 23.4s;
+            animation-delay: -4.7s;
+            transform-origin: 11vw 6vh;
+            box-shadow: -40vmin 0 12.8035878131vmin currentColor;
+          }
+          @else if $i == 20 {
+            color: #00B7EB;
+            top: 95%;
+            left: 40%;
+            animation-duration: 31.6s;
+            animation-delay: -12.4s;
+            transform-origin: -20vw -18vh;
+            box-shadow: 40vmin 0 6.167922143vmin currentColor;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes move {
+    100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+  }
+  
+  
+  .scroll-element-up{
+    opacity:0;
+    transition: all 1s ;
+    transform:translateY(100px)
+  }
+  .scrolled-up{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  .scroll-element-right{
+    opacity:0;
+    transition: all 1s ;
+    transform:translateX(-100px)
+  }
+  .scrolled-right{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+  .scroll-element-left{
+    opacity:0;
+    transition: all 1s ;
+    transform:translateX(100px)
+  }
+  .scrolled-left{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+  .scroll-element-grow{
+    opacity:0;
+    transition: all 1.5s ;
+    transform:scale(0);
+  }
+  .scrolled-grow{
+    opacity:1;
+    transform:scale(1);
+  }

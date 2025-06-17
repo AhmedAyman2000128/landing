@@ -1,0 +1,162 @@
+---
+import Feature from './Feature.astro';
+import nextIcon from '@assets/next.png';
+import githubIcon from "@assets/github.png";
+import zipIcon from "@assets/zip.png";
+import frameworkIcon from "@assets/frameworks.png";
+import logStreamingIcon from "@assets/logStreaming.png";
+import uiuxIcon from "@assets/uiux.png";
+import autoScalingIcon from "@assets/AutoScaling.png";
+import sslIcon from "@assets/ssl.png";
+import cicdcon from "@assets/cicd.png";
+import rollBackIcon from "@assets/rollback.png";
+const features = [
+  {
+    title: "Github Integration",
+    description: "Seamless integration with GitHub for automatic deployments, version control, and collaboration",
+    icon:githubIcon,
+    alt: "GitHub Icon",
+  },
+  {
+    title: "Zip File Deploy",
+    description: "Upload and deploy your projects instantly with simple drag-and-drop zip file support for rapid prototyping",
+    icon:zipIcon,
+    alt: "Zip File Icon",
+  },
+  {
+    title: "Build Frameworks",
+    description: "Support for multiple frameworks, allowing you to deploy apps built with your favorite technologies",
+    icon:frameworkIcon,
+    alt: "Frameworks Icon",
+  },
+  {
+    title: "Log Streaming",
+    description: "Real-time build and runtime logs streamed directly to you for instant debugging and monitoring",
+    icon:logStreamingIcon,
+    alt: "Log Streaming Icon",
+  },
+  {
+    title: "Easy UI/UX",
+    description: "Intuitive interface designed for developers, with powerful features that don't sacrifice simplicity.",
+    icon:uiuxIcon,
+    alt: "UI/UX Icon",
+  },
+  {
+    title: "Auto Scaling",
+    description: "Automatic scaling based on traffic demands ensures your applications perform optimally under any load.",
+    icon:autoScalingIcon,
+    alt: "Auto Scaling Icon",
+  },
+  {
+    title: "SSL Certificates",
+    description: "Free SSL certificates for secure connections, automatically managed and renewed for you.",
+    icon:sslIcon,
+    alt: "SSL Icon",
+  },
+  {
+    title: "CI/CD Pipeline",
+    description: "Automated continuous integration and deployment workflows that adapt to your development process.",
+    icon:cicdcon,
+    alt: "CI/CD Icon",
+  },
+  {
+    title: "Instant Rollback",
+    description: "Quickly revert to previous versions with a single click, ensuring minimal downtime during updates.",
+    icon:rollBackIcon,
+    alt: "Rollback Icon",
+  },
+];
+---
+
+<section class="features px-4 py-8 flex flex-col items-center gap-2 container scroll-element-up">
+  <div class="my-2 sm:my-10 text-center">
+    <h2 class="appearance-none bg-clip-text bg-ocean-gradient text-transparent  text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl mb-4 sm:-mt-8 ">Powerful Features</h2>
+    <p class="text-gray-200 text-xl xl:text-2xl 2xl:text-3xl">Everything you need to build, deploy, and scale your applications with confidence</p>
+  </div>
+    <div class="px-4 py-8 flex items-center gap-2 w-full">
+      <div class="hidden md:block">
+        <div class="swiper-button-prev rotate-180"><img src={nextIcon.src} alt="previous arrow" class="w-5"/></div>
+    </div>
+  <div class="swiper w-11/12"
+  >
+  <div class="swiper-wrapper">
+    {features.map(feature => (
+      <div class="swiper-slide">
+        <Feature 
+        title={feature.title}
+        description={feature.description} 
+        icon={feature.icon}
+        alt={feature.alt}
+        />
+      </div>
+    ))}
+    </div>
+  </div>
+  <div class="hidden md:block">
+    <div class="swiper-button-next"><img src={nextIcon.src} alt="next arrow" class="w-5 "/></div>
+  </div>
+    </div>
+  <div class="swiper-pagination"></div>
+</section>
+<script>
+    import Swiper from 'swiper';
+    import 'swiper/css';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
+    import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+    const swiper = new Swiper('.swiper', {
+    modules: [Navigation,Pagination,Autoplay],
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            slidesPerGroup: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+        },
+    },
+    spaceBetween: 20,      
+    loop:true,
+    hashNavigation: {
+        watchState: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    });
+
+  </script>
+  <style>
+    .swiper-button-prev,.swiper-button-next{
+        position:static;
+        background-color: white;
+        border-radius: 50%;
+        width:30px;
+        height:30px;
+    }
+    .swiper-button-prev::after,.swiper-button-next::after{
+        content:""
+    }
+    .swiper-pagination{
+      position:static;
+    }
+
+  </style>
