@@ -233,7 +233,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'ocean-gradient': 'linear-gradient(to right, #7F00FF, #00BFFF)',
+        'ocean-gradient': 'linear-gradient(to right, #6dd5ed, #a770ef)',
         'deep-ocean':'linear-gradient(90deg, #0d1a21, #1f3a52, #3a6a85)',
       },
     },
